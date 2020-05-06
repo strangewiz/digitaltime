@@ -18,10 +18,16 @@
                              }];
 }
 
+- (void)extendTimelineForComplication {
+  id server = [CLKComplicationServer sharedInstance];
+  for (id complication in [server activeComplications]) {
+    [server extendTimelineForComplication:complication];
+  }
+}
+
 - (void)applicationDidBecomeActive {
-  // Restart any tasks that were paused (or not yet started) while the
-  // application was inactive. If the application was previously in the
-  // background, optionally refresh the user interface.
+  [self scheduleBackgroundTask];
+  [self extendTimelineForComplication];
 }
 
 - (void)applicationWillResignActive {
@@ -36,11 +42,7 @@
     (NSSet<WKRefreshBackgroundTask*>*)backgroundTasks {
   for (WKRefreshBackgroundTask* task in backgroundTasks) {
     if ([task isKindOfClass:[WKApplicationRefreshBackgroundTask class]]) {
-      // Reload complication.
-      id server = [CLKComplicationServer sharedInstance];
-      for (id complication in [server activeComplications]) {
-        [server reloadTimelineForComplication:complication];
-      }
+      [self extendTimelineForComplication];
       [self scheduleBackgroundTask];
     }
     [task setTaskCompletedWithSnapshot:NO];

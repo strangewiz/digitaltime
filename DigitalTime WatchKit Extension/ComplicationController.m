@@ -22,9 +22,8 @@
 - (void)getTimelineEndDateForComplication:(CLKComplication*)complication
                               withHandler:
                                   (void (^)(NSDate* __nullable date))handler {
-  // Tell the system we are good for a day, even though we can't give back 1440
-  // repeating timeline entries for eva.
-  handler([[NSDate date] dateByAddingTimeInterval:86400]);
+  // Tell the system we are good for centuries...
+  handler([NSDate distantFuture]);
 }
 
 - (void)getPrivacyBehaviorForComplication:(CLKComplication*)complication
@@ -61,28 +60,25 @@
   NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
   [formatter setDateFormat:@"h:mm a"];
 
-  // Round down to 58 second mark.  This is a little strange, but when the watch
+  // Round down to 59 second mark.  This is a little strange, but when the watch
   // is in 'always on'/'dimmed' the time always seems to be off by a minute. By
-  // setting the timeline entry time down to 58 seconds and the formatted string
+  // setting the timeline entry time down to 59 seconds and the formatted string
   // to the 'next' minute, we can try to get things in sync.
   NSInteger seconds =
       [[[NSCalendar currentCalendar] components:NSCalendarUnitSecond
                                        fromDate:date] second];
-  seconds += 2;
+  seconds += 1;
   date = [date dateByAddingTimeInterval:-seconds];
 
-  int count = limit < 60 ? limit : 60;
-  // Load the next hour's worth of minutes, or limit's worth if it's less
-  // then 60.
   NSMutableArray* array = [NSMutableArray arrayWithCapacity:60];
-  for (int minute = 0; minute < count; minute++) {
+  for (int minute = 0; minute < limit; minute++) {
     date = [date dateByAddingTimeInterval:60];
     CLKComplicationTemplateUtilitarianSmallFlat* template =
         [[CLKComplicationTemplateUtilitarianSmallFlat alloc] init];
 
     // Date here is set back to 58 seconds, so add 2 to format a string for the
     // current (next) minute.
-    NSString* st = [formatter stringFromDate:[date dateByAddingTimeInterval:2]];
+    NSString* st = [formatter stringFromDate:[date dateByAddingTimeInterval:1]];
 //    NSLog(@"setting %@ for %@", st, date);
     template.textProvider = [CLKSimpleTextProvider textProviderWithText:st];
     [array addObject:[CLKComplicationTimelineEntry entryWithDate:date

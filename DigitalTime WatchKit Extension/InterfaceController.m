@@ -12,10 +12,6 @@
 
 - (void)willActivate {
   [super willActivate];
-  id server = [CLKComplicationServer sharedInstance];
-  for (id complication in [server activeComplications]) {
-    [server reloadTimelineForComplication:complication];
-  }
 }
 
 - (void)didDeactivate {

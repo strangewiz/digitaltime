@@ -22,8 +22,9 @@
 - (void)getTimelineEndDateForComplication:(CLKComplication*)complication
                               withHandler:
                                   (void (^)(NSDate* __nullable date))handler {
-  // Tell the system we are good for centuries...
-  handler([NSDate distantFuture]);
+  // Tell the system we are good for a day, even though we can't give back 1440
+  // repeating timeline entries for eva.
+  handler([[NSDate date] dateByAddingTimeInterval:3600]);
 }
 
 - (void)getPrivacyBehaviorForComplication:(CLKComplication*)complication
@@ -70,8 +71,11 @@
   seconds += 1;
   date = [date dateByAddingTimeInterval:-seconds];
 
+  int count = limit < 60 ? limit : 60;
+  // Load the next hour's worth of minutes, or limit's worth if it's less
+  // then 60.
   NSMutableArray* array = [NSMutableArray arrayWithCapacity:60];
-  for (int minute = 0; minute < limit; minute++) {
+  for (int minute = 0; minute < count; minute++) {
     date = [date dateByAddingTimeInterval:60];
     CLKComplicationTemplateUtilitarianSmallFlat* template =
         [[CLKComplicationTemplateUtilitarianSmallFlat alloc] init];

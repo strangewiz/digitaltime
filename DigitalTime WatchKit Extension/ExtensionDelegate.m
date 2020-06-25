@@ -39,6 +39,7 @@
     return;
   }
   id server = [CLKComplicationServer sharedInstance];
+//  // TODO: complication workaround attemp.
 //  #pragma clang diagnostic push
 //  #pragma clang diagnostic ignored "-Wundeclared-selector"
 //  [server performSelector:@selector(_checkinWithServer)];
@@ -79,40 +80,7 @@
 }
 
 - (void)log:(NSString*)msg {
-  // Hack, ping home.
   NSLog(@"%@", msg);
-  //good:
-//  NSString* url = [NSString
-//      stringWithFormat:@"https://justinsc.com/watch/ping.php?msg=%@", msg];
-//  NSMutableURLRequest* urlRequest =
-//      [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
-//  [urlRequest setHTTPMethod:@"GET"];
-
-  
-  
-  // bad.
-  //  if (!self.session) {
-  //    self.session =
-  //    NSURLSessionConfiguration* configuration = [NSURLSessionConfiguration
-  //        backgroundSessionConfigurationWithIdentifier:
-  //            [NSString
-  //                stringWithFormat:@"com.justinc.%@", [NSUUID
-  //                UUID].UUIDString]];
-  //    configuration.allowsCellularAccess = YES;
-  //    configuration.sessionSendsLaunchEvents = NO;
-  //    configuration.discretionary = NO;
-  //    self.session = [NSURLSession sessionWithConfiguration:configuration
-  //                                                          delegate:self
-  //                                                     delegateQueue:nil];
-  //  }
-  //good:
-//  NSURLSession* session = [NSURLSession sharedSession];
-//  NSURLSessionDataTask* dataTask =
-//      [session dataTaskWithRequest:urlRequest
-//                 completionHandler:^(NSData* data, NSURLResponse* response,
-//                                     NSError* error){
-//                 }];
-//  [dataTask resume];
 }
 
 - (void)applicationDidBecomeActive {
@@ -129,27 +97,6 @@
   // pause ongoing tasks, disable timers, etc.
 }
 
-//- (void)handleBackgroundTasks:
-//    (NSSet<WKRefreshBackgroundTask*>*)backgroundTasks {
-//  [self log:@"handleBackgroundTasks"];
-//  for (WKRefreshBackgroundTask* task in backgroundTasks) {
-//    NSString* msg =
-//        [NSString stringWithFormat:@"handleBackgroundTasks,%@", task.class];
-//    [self log:msg];
-//    //    if ([task isKindOfClass:[WKApplicationRefreshBackgroundTask class]])
-//    {
-//      [self reloadTimelineForComplication];
-//      [self scheduleBackgroundTask];
-//      //    }
-//      dispatch_after(
-//          dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)),
-//          dispatch_get_main_queue(), ^{
-//            // Give background task 2 seconds before calling completed.
-//            [task setTaskCompletedWithSnapshot:NO];
-//          });
-//    }
-//  }
-
 - (void)handleBackgroundTasks:
     (NSSet<WKRefreshBackgroundTask*>*)backgroundTasks {
   for (WKRefreshBackgroundTask* task in backgroundTasks) {
@@ -161,6 +108,7 @@
       [self reloadTimelineForComplication];
       [self scheduleBackgroundTask];
     }
+    // TODO: complication workaround attemp.
     // Give background task 2 seconds before calling completed, because
     // insanity.
     dispatch_after(

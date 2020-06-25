@@ -10,4 +10,5 @@ There's a *TON* of cruft in here to workaround complications not updating.  I tr
 ways to do the same thing.
 
 2020-06-25: Currently the app eventually stops updating the timeline, and one has to tap on
-the complication itself to get things started.
+the complication itself to get things started.  Sometimes things work all day, sometimes things
+die after 3 or 4 hours.  See FB7708205 for reference.

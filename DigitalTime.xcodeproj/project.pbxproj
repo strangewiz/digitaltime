@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		934367C92427E40F0015FA39 /* DigitalTime WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 934367C82427E40F0015FA39 /* DigitalTime WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		934367C92427E40F0015FA39 /* DigitalTime.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 934367C82427E40F0015FA39 /* DigitalTime.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		934367CF2427E40F0015FA39 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934367CD2427E40F0015FA39 /* Interface.storyboard */; };
 		934367D12427E4110015FA39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934367D02427E4110015FA39 /* Assets.xcassets */; };
-		934367D82427E4110015FA39 /* DigitalTime WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 934367D72427E4110015FA39 /* DigitalTime WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		934367D82427E4110015FA39 /* DigitalTime.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 934367D72427E4110015FA39 /* DigitalTime.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		934367DE2427E4110015FA39 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934367DD2427E4110015FA39 /* InterfaceController.m */; };
 		934367E12427E4110015FA39 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 934367E02427E4110015FA39 /* ExtensionDelegate.m */; };
 		934367E42427E4110015FA39 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934367E32427E4110015FA39 /* ComplicationController.m */; };
 		934367E62427E4120015FA39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934367E52427E4120015FA39 /* Assets.xcassets */; };
+		93E8D0CE24A53CDC002F5CA6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 93E8D0CD24A53CDB002F5CA6 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				934367D82427E4110015FA39 /* DigitalTime WatchKit Extension.appex in Embed App Extensions */,
+				934367D82427E4110015FA39 /* DigitalTime.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,7 +53,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				934367C92427E40F0015FA39 /* DigitalTime WatchKit App.app in Embed Watch Content */,
+				934367C92427E40F0015FA39 /* DigitalTime.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,11 +62,11 @@
 
 /* Begin PBXFileReference section */
 		934367C42427E40F0015FA39 /* DigitalTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		934367C82427E40F0015FA39 /* DigitalTime WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DigitalTime WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		934367C82427E40F0015FA39 /* DigitalTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		934367CE2427E40F0015FA39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		934367D02427E4110015FA39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		934367D22427E4110015FA39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		934367D72427E4110015FA39 /* DigitalTime WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DigitalTime WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		934367D72427E4110015FA39 /* DigitalTime.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DigitalTime.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		934367DC2427E4110015FA39 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
 		934367DD2427E4110015FA39 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
 		934367DF2427E4110015FA39 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		934367E32427E4110015FA39 /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
 		934367E52427E4120015FA39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		934367E72427E4120015FA39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93E8D0CD24A53CDB002F5CA6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		934367BD2427E40E0015FA39 = {
 			isa = PBXGroup;
 			children = (
+				93E8D0CD24A53CDB002F5CA6 /* README.md */,
 				934367CC2427E40F0015FA39 /* DigitalTime WatchKit App */,
 				934367DB2427E4110015FA39 /* DigitalTime WatchKit Extension */,
 				934367C52427E40F0015FA39 /* Products */,
@@ -100,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				934367C42427E40F0015FA39 /* DigitalTime.app */,
-				934367C82427E40F0015FA39 /* DigitalTime WatchKit App.app */,
-				934367D72427E4110015FA39 /* DigitalTime WatchKit Extension.appex */,
+				934367C82427E40F0015FA39 /* DigitalTime.app */,
+				934367D72427E4110015FA39 /* DigitalTime.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,7 +168,7 @@
 			);
 			name = "DigitalTime WatchKit App";
 			productName = "DigitalTime WatchKit App";
-			productReference = 934367C82427E40F0015FA39 /* DigitalTime WatchKit App.app */;
+			productReference = 934367C82427E40F0015FA39 /* DigitalTime.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		934367D62427E4110015FA39 /* DigitalTime WatchKit Extension */ = {
@@ -182,7 +185,7 @@
 			);
 			name = "DigitalTime WatchKit Extension";
 			productName = "DigitalTime WatchKit Extension";
-			productReference = 934367D72427E4110015FA39 /* DigitalTime WatchKit Extension.appex */;
+			productReference = 934367D72427E4110015FA39 /* DigitalTime.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
@@ -230,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93E8D0CE24A53CDC002F5CA6 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +415,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinc.DigitalTime.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = DigitalTime;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -432,7 +436,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinc.DigitalTime.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = DigitalTime;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -449,7 +453,7 @@
 				IBSC_MODULE = DigitalTime_WatchKit_Extension;
 				INFOPLIST_FILE = "DigitalTime WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinc.DigitalTime.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DigitalTime;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -466,7 +470,7 @@
 				IBSC_MODULE = DigitalTime_WatchKit_Extension;
 				INFOPLIST_FILE = "DigitalTime WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinc.DigitalTime.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DigitalTime;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;

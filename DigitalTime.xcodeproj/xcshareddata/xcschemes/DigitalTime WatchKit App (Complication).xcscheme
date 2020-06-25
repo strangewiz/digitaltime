@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "934367C72427E40F0015FA39"
-               BuildableName = "DigitalTime WatchKit App.app"
+               BuildableName = "DigitalTime.app"
                BlueprintName = "DigitalTime WatchKit App"
                ReferencedContainer = "container:DigitalTime.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -55,18 +55,16 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "32">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/DigitalTime WatchKit App">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "934367C72427E40F0015FA39"
-            BuildableName = "DigitalTime WatchKit App.app"
+            BuildableName = "DigitalTime.app"
             BlueprintName = "DigitalTime WatchKit App"
             ReferencedContainer = "container:DigitalTime.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,27 +73,16 @@
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "32">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/DigitalTime WatchKit App">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "934367C72427E40F0015FA39"
-            BuildableName = "DigitalTime WatchKit App.app"
+            BuildableName = "DigitalTime.app"
             BlueprintName = "DigitalTime WatchKit App"
             ReferencedContainer = "container:DigitalTime.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "934367C72427E40F0015FA39"
-            BuildableName = "DigitalTime WatchKit App.app"
-            BlueprintName = "DigitalTime WatchKit App"
-            ReferencedContainer = "container:DigitalTime.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

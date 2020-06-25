@@ -39,7 +39,7 @@
     return;
   }
   id server = [CLKComplicationServer sharedInstance];
-//  // TODO: complication workaround attemp.
+//  // TODO: complication workaround attempt.
 //  #pragma clang diagnostic push
 //  #pragma clang diagnostic ignored "-Wundeclared-selector"
 //  [server performSelector:@selector(_checkinWithServer)];
@@ -108,7 +108,7 @@
       [self reloadTimelineForComplication];
       [self scheduleBackgroundTask];
     }
-    // TODO: complication workaround attemp.
+    // TODO: complication workaround attempt.
     // Give background task 2 seconds before calling completed, because
     // insanity.
     dispatch_after(

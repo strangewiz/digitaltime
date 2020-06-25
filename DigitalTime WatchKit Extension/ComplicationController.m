@@ -26,6 +26,7 @@
                                     (void (^)(NSDate* __nullable date))handler {
   ExtensionDelegate* delegate = WKExtension.sharedExtension.delegate;
   [delegate log:@"getTimelineStartDateForComplication"];
+  // TODO: complication workaround attempt.
   // TODO: Is this necessary?
   handler(nil);
 }
@@ -36,6 +37,7 @@
   ExtensionDelegate* delegate = WKExtension.sharedExtension.delegate;
   [delegate log:@"getTimelineEndDateForComplication"];
 
+  // TODO: complication workaround attempt.
   // TODO: I've tried various entries here (hour, distantTime, etc).  For now
   // TODO: just doing nil.
   handler(nil);
@@ -106,6 +108,7 @@
   NSDate* original_date = [date copy];
 
   if ([date compare:[NSDate now]] == NSOrderedDescending) {
+    // TODO: complication workaround attempt.
     // SKip the first call for subsequent calls to handler to avoid duplicating.
     date = [date dateByAddingTimeInterval:60];
   }
@@ -113,6 +116,7 @@
   NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
   [formatter setDateFormat:@"h:mm a"];
 
+  // TODO: complication workaround attempt.
   // Round up to 59 second mark.  This is a little strange, but when the watch
   // is in 'always on'/'dimmed' the time always seems to be off by a minute. By
   // setting the timeline entry time down to 59 seconds and the formatted string
@@ -123,17 +127,21 @@
   seconds += 1;
   date = [date dateByAddingTimeInterval:-seconds];
   
+  // TODO: complication workaround attempt.
   int count = limit;// < 99 ? limit : 99;
 
   //int refresh_count = delegate.refreshCount;
 
+  
+  // TODO: complication workaround attempt.
   // Load the next hour's worth of minutes, or limit's worth if it's less
   // then 60.
   NSMutableArray* array = [NSMutableArray arrayWithCapacity:100];
   for (int minute = 0; minute < count; minute++) {
     date = [date dateByAddingTimeInterval:60];
 
-//    // bail if over 95 minutes, for science.  This is dumb.
+//    // TODO: complication workaround attempt.
+//    // bail if over 95 minutes, for science.
 //    NSTimeInterval diff = [date timeIntervalSinceDate:[NSDate now]];
 //    if (floor(diff/60) >= 95) {
 //      handler(array);
